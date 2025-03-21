@@ -1,0 +1,11 @@
+# Visual Studio cache and user-specific files
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+# Configuration
+appsettings*.json
