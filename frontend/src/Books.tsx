@@ -42,7 +42,7 @@ const Books: React.FC = () => {
     if (savedCategory) setSelectedCategory(savedCategory);
     if (savedPage) setCurrentPage(parseInt(savedPage));
 
-    fetch("https://localhost:7070/api/books")
+    fetch("https://mission13bearbackend-ahfeejffc2e0f3fb.eastus-01.azurewebsites.net/api/books")
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch books");
         return response.json();
@@ -109,6 +109,12 @@ const Books: React.FC = () => {
   return (
     <div className="container mt-5">
       <h1 className="text-center mb-4 fw-bold">Online Bookstore</h1>
+          <div className="text-center mb-3">
+          <Link to="/adminbooks" className="btn btn-warning">
+          📚 Go to Admin Page
+          </Link>
+        </div>
+
 
       <div className="row">
         {/* Sidebar: Filters, Sort, Cart Summary */}
